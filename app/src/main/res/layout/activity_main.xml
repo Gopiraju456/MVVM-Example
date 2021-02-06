@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main"
+        tools:context=".views.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/appbar">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/toolbar"
+                app:titleTextColor="@color/gopi">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"
+                    android:layout_marginEnd="@dimen/gopi10dp"
+                    android:layout_marginTop="@dimen/gopi12dp"
+                    android:layout_weight="0.2"
+                    android:id="@+id/iv" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="220dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/et1"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="@dimen/gopi8dp"
+                    android:layout_marginEnd="@dimen/gopi15"
+                    android:inputType="text"
+                    android:hint="Wikipedia search"
+                    android:paddingLeft="@dimen/gopi10dp"
+                    android:textColor="@color/text"
+                    android:background="@drawable/background" />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/search"
+                    android:layout_marginTop="@dimen/gopi8dp"
+                    android:background="@drawable/background"
+                    android:layout_weight=".5"
+                    android:layout_marginRight="@dimen/gopi15"
+                    android:src="@drawable/ic_baseline_search_24"
+                    />
+                </LinearLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:id="@+id/rview"
+            android:background="@color/two"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
