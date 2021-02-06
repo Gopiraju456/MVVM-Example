@@ -34,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mainBinding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
-        LinearLayoutManager ll=new
-                LinearLayoutManager(this);
-               // GridLayoutManager(this,2);
+        LinearLayoutManager ll=new GridLayoutManager(this,2);
+              //  LinearLayoutManager(this);
+
+
         mainBinding.rview.setLayoutManager(ll);
         gold=new ArrayList<>();
 
